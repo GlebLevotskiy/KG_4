@@ -51,11 +51,15 @@ namespace KG_4
                     i * 10);
             }
 
+            var start = DateTime.Now;
+
             List<Point> points = algorithm.Invoke(
                 (int)x1Selector.Value,
                 (int)y1Selector.Value,
                 (int)x2Selector.Value,
                 (int)y2Selector.Value);
+
+            MessageBox.Show((DateTime.Now - start).ToString());
 
             StringBuilder sb = new StringBuilder();
 
